@@ -31,7 +31,7 @@ This is what the Boxer semantic parser achieved (Bos, 2008). The parser first re
 The original Boxer was written in Prolog. While Prolog is especially well-suited to handle Lambda-DRSs (with its built-in unification mechanism), the tools are currently not maintained. For this project, the goal was to see whether a Python-implementation of some of its aspects was realistic. 
 
 Other available tools: 
-During this project, I took inspiration from ccg2lambda (Pascual, 2016) (which also contains a working version of the CandC parser): while CCG2lambda provides logical derivations from expressions built from CCGs the way I described above, it does not handle lambda-DRSs and relies on NLTK logic for the backend. 
+During this project, I took inspiration from ccg2lambda (Pascual, 2016) (which also contains a working version of the C&C parser): while CCG2lambda provides logical derivations from expressions built from CCGs the way I described above, it does not handle lambda-DRSs and relies on NLTK logic for the backend. 
 
 While NLTK logic is infinitely more reliable in its lambda calculus application, I wanted to be able to have an intermediate representation for DRSs that would be quick to interpret given its equivalent in Prolog, for ease of implementation. Moreover, while the DRS module in NLTK logic is more advanced (it actually implements some parts of BAT like anaphora resolution), it requires the user to construct the DRS themselves, and does not provide an unified framework for the syntax to semantics mapping. I ran tests to make sure that the lambda calculus steps (free variable checking, alpha-conversion and beta-reduction) are actually equivalent in both modules (within the expressions available in the limited lexicon on my side of things). A future step would be to check the equivalence for more complex expressions, and possibly create a tool to convert from CCG-parsed Lambda DRS expressions to a representation NLTK Logic accepts. 
 
@@ -66,17 +66,17 @@ Files:
 - Mapping: Nested dictionnary mapping (using the CCG category as the first tier, and the POS as the second one) to the functions
 - Substitution: contains the core lambda caculus logic, with a variable counter, a function to assign fresh variables while keeping track of the previous ones, the alpha reduction, substitution and beta-reduction operations
 - showDRS: prints out the object DRS in the box format
-- parse_sentences: calls the CandC tools to obtain parse a .txt file containing the sentences
+- parse_sentences: calls the C&C tools to obtain parse a .txt file containing the sentences
 - parse_CCG: recursively composes the Lambda calculus tree by traversing the XML parse, looking up the leaf nodes in the lexicon and then using the rules to infer the application order
 
 How to run: 
-1. Install ccg2lambda (for the CandC CCG parser), following the instructions available at [ccg2lambda](https://github.com/mynlp/ccg2lambda).
-2. Install the CandC tools (see above for instructions). 
-3. From the CLI: create file with one sentence per row, and call run createDRS.py, passing: path to file, path to outputdir, path to ccg2lambda and path to candc tools (which should be in ccg2lambda). Note that ccg2lambda is mostly used as an intermediary here to obtain the derivation in XML format.
+1. Install ccg2lambda (for the C&C CCG parser), following the instructions available at [ccg2lambda](https://github.com/mynlp/ccg2lambda).
+2. Install the C&C tools (see above for instructions). 
+3. From the CLI: create file with one sentence per row, and call run createDRS.py, passing: path to file, path to outputdir, path to ccg2lambda and path to C&C tools (which should be in ccg2lambda). Note that ccg2lambda is mostly used as an intermediary here to obtain the derivation in XML format.
 4. Note that this repo already has some example sentences to run the parses on (in sentences.txt), and the results for these parses are already available in results.txt)
 
 Repos: 
-- (legacy repo for Boxer and CandC: [learningbyreading](https://github.com/valeriobasile/learningbyreading)
+- (legacy repo for Boxer and C&C: [learningbyreading](https://github.com/valeriobasile/learningbyreading)
 - ccg2lambda: [ccg2lambda](https://github.com/mynlp/ccg2lambda)
 - NLTK sem logic: [NLTK sem logic](https://www.nltk.org/_modules/nltk/sem/logic.html)
 
