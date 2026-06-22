@@ -70,9 +70,10 @@ Files:
 - parse_CCG: recursively composes the Lambda calculus tree by traversing the XML parse, looking up the leaf nodes in the lexicon and then using the rules to infer the application order
 
 How to run: 
-1. Install ccg2lambda (for the CandC CCG parser), following the instructions available at [ccg2lambda](https://github.com/mynlp/ccg2lambda).  
-2. From the CLI: create file with one sentence per row, and call run createDRS.py, passing: path to file, path to outputdir, path to ccg2lambda and path to candc tools (which should be in ccg2lambda)
-3. Note that this repo already has some example sentences to run the parses on (in sentences.txt), and the results for these parses are already available in results.txt)
+1. Install ccg2lambda (for the CandC CCG parser), following the instructions available at [ccg2lambda](https://github.com/mynlp/ccg2lambda).
+2. Install the CandC tools (see above for instructions). 
+3. From the CLI: create file with one sentence per row, and call run createDRS.py, passing: path to file, path to outputdir, path to ccg2lambda and path to candc tools (which should be in ccg2lambda). Note that ccg2lambda is mostly used as an intermediary here to obtain the derivation in XML format.
+4. Note that this repo already has some example sentences to run the parses on (in sentences.txt), and the results for these parses are already available in results.txt)
 
 Repos: 
 - (legacy repo for Boxer and CandC: [learningbyreading](https://github.com/valeriobasile/learningbyreading)
