@@ -72,6 +72,7 @@ Files:
 How to run: 
 1. Install ccg2lambda (for the CandC CCG parser), following the instructions available at [ccg2lambda](https://github.com/mynlp/ccg2lambda).  
 2. From the CLI: create file with one sentence per row, and call run createDRS.py, passing: path to file, path to outputdir, path to ccg2lambda and path to candc tools (which should be in ccg2lambda)
+3. Note that this repo already has some example sentences to run the parses on (in sentences.txt), and the results for these parses are already available in results.txt)
 
 Repos: 
 - (legacy repo for Boxer and CandC: [learningbyreading](https://github.com/valeriobasile/learningbyreading)
