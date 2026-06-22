@@ -4,7 +4,7 @@ A rudimentary Boxer-inspired semantic parser in Python.
 DRT is a semantic framework which aims at handling presupposition resolution within the context of a discourse: phenomena like anaphora are treated as such, and they can either be unified with existing referents (binding), or introduced as new referents (accomodation) in the discourse (Bos, 2003). DRT therefore offers a way of doing formal semantics in a format inspired by mental representations (Kamp, 2024). 
 
 Example sentence: "Every woman is drinking coffee." (universal quantification)
-
+```text
 ┌─────────────────────────────────────────┐
 │                                         │
 ├─────────────────────────────────────────┤
@@ -18,6 +18,7 @@ Example sentence: "Every woman is drinking coffee." (universal quantification)
 │                 │ temp_includes(T,s6) │ │
 │                 │ temp_abut(e2,s6)    │ │
 │                 └─────────────────────┘ │
+└─────────────────────────────────────────┘
 └─────────────────────────────────────────┘
 
 
