@@ -1,0 +1,9 @@
+A woman is ordering tea. 
+A woman is drinking tea.
+A woman is drinking tea and coffee. 
+A woman is drinking tea or coffee.
+Every woman is drinking coffee. 
+A woman is drinking coffee in a cafe. 
+A woman is not drinking tea. 
+Every woman is not drinking tea. 
+Every woman is drinking tea or coffee.
