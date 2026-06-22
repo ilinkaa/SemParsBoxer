@@ -71,7 +71,7 @@ Files:
 
 How to run: 
 1. Install ccg2lambda (for the CandC CCG parser), following the instructions available at [ccg2lambda](https://github.com/mynlp/ccg2lambda).  
-2. From the CLI: create file with one sentence per row, and call run createDRS.py, passing the path to the file (default directory is assumed), as well as the output dir, and the path to the CandC tools from CCG2Lambda.
+2. From the CLI: create file with one sentence per row, and call run createDRS.py, passing: path to file, path to outputdir, path to ccg2lambda and path to candc tools (which should be in ccg2lambda)
 
 Repos: 
 - (legacy repo for Boxer and CandC: [learningbyreading](https://github.com/valeriobasile/learningbyreading)
