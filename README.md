@@ -20,7 +20,7 @@ Example sentence: "Every woman is drinking coffee." (universal quantification)
 │                 └─────────────────────┘ │
 └─────────────────────────────────────────┘
 └─────────────────────────────────────────┘
-
+```
 
 For this purpose, boxes (DRS) are used, composed of a set of referents, and a set of conditions. Complex DRS conditions can be introduced, like negation or logical implication. Since the goal is to be able to offer a setting in which accomodation or binding can be done with respect to the restrictions of the discourse, the structure matters in order to be able to know which information can be accessed in which part of the discourse: this is done by checking for the acessibility condition. 
 
